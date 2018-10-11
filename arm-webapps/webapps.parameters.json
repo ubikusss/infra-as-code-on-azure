@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "servicePlanName": {
-            "value": "tomasplan"
+            "value": "diniplan"
         },
         "dbServer": {
-            "value": "tomassqlserver"
+            "value": "dinisqlserver"
         },
         "dbAdminLogin": {
-            "value": "tomas"
+            "value": "dini"
         },
         "dbAdminPassword": {
             "value": "Azure12345678"
@@ -36,41 +36,41 @@
             "value": "Azure12345678"
         },
         "domain": {
-            "value": "azure.tomaskubica.cz"
+            "value": "azure.diniz.ro"
         },
         "dnsResourceGroup": {
             "value": "shared-services"
         },
         "certificateName": {
-            "value": "azure-tomaskubica-cz"
+            "value": "azure-dini-ro"
         },
         "sitesObject": {
             "value": {
                 "sites": [
                     {
-                        "siteName": "tomasappka01",
-                        "dbName": "tomasappdbka01",
-                        "dbCollation": "CZECH_CI_AS"
+                        "siteName": "diniapp01",
+                        "dbName": "diniappdb01",
+                        "dbCollation": "Latin1_General_CI_AS"
                     },
                     {
-                        "siteName": "tomasappka02",
-                        "dbName": "tomasappdbka02",
-                        "dbCollation": "CZECH_CI_AS"
+                        "siteName": "diniapp02",
+                        "dbName": "diniappdb02",
+                        "dbCollation": "Latin1_General_CI_AS"
                     },
                     {
-                        "siteName": "tomasappka03",
-                        "dbName": "tomasappdbka03",
-                        "dbCollation": "CZECH_CI_AS"
+                        "siteName": "diniapp03",
+                        "dbName": "diniappdb03",
+                        "dbCollation": "Latin1_General_CI_AS"
                     },
                     {
-                        "siteName": "tomasappka04",
-                        "dbName": "tomasappdbka04",
-                        "dbCollation": "CZECH_CI_AS"
+                        "siteName": "diniapp04",
+                        "dbName": "diniappdb04",
+                        "dbCollation": "Latin1_General_CI_AS"
                     },
                     {
-                        "siteName": "tomasappka05",
-                        "dbName": "tomasappdbka05",
-                        "dbCollation": "CZECH_CI_AS"
+                        "siteName": "diniapp05",
+                        "dbName": "diniappdb05",
+                        "dbCollation": "Latin1_General_CI_AS"
                     }
                 ]
             }
