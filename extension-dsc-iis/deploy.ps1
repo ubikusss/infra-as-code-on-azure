@@ -4,7 +4,7 @@ New-AzureRmResourceGroup -ResourceGroupName $resourceGroupName `
 -Location westeurope
 
 # Prepare storage account and container
-$storageAccountName = "mujextensionstorage"
+$storageAccountName = "diniextensionstorage"
 New-AzureRmStorageAccount -ResourceGroupName $resourceGroupName `
   -Name $storageAccountName `
   -Location westeurope `

@@ -36,7 +36,7 @@
       "addressPrefix": "10.0.0.0/16",
       "subnetName": "web-sub",
       "subnetPrefix": "10.0.0.0/24",
-      "publicIPAddressName": "myPublicIP",
+      "publicIPAddressName": "DSCPublicIP",
       "vmName": "web-vm",
       "virtualNetworkName": "web-net",
       "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"

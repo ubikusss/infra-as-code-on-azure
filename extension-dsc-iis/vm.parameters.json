@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "tomas"
+      "value": "dini"
     },
     "adminPassword": {
-      "value": "Azure12345678"
+      "value": "P@ssword1234"
     },
     "modulesUrl": {
-      "value": "https://mujextensionstorage.blob.core.windows.net/windows-powershell-dsc/setupIIS.ps1.zip"
+      "value": "https://diniextensionstorage.blob.core.windows.net/windows-powershell-dsc/setupIIS.ps1.zip"
     },
     "configurationFunction": {
       "value": "setupIIS.ps1\\setupIIS"

@@ -4,15 +4,15 @@ New-AzureRmResourceGroup -ResourceGroupName $resourceGroupName `
 -Location westeurope
 
 # Create Azure Key Vault
-$keyVaultName = "my-keyvault-123"
+$keyVaultName = "dini-keyvault"
 $keyVault = New-AzureRmKeyVault -VaultName $keyVaultName `
     -ResourceGroupName $resourceGroupName `
     -EnabledForTemplateDeployment `
     -Location westeurope
 
-$secretvalue = ConvertTo-SecureString 'mojeHeslo1234@' -AsPlainText -Force
+$secretvalue = ConvertTo-SecureString 'P@ssword1234!' -AsPlainText -Force
 Set-AzureKeyVaultSecret -VaultName $keyVaultName  `
-    -Name 'moje-heslo' -SecretValue $secretvalue
+    -Name 'secret-dini' -SecretValue $secretvalue
 
 # Get Key Vault ID for rederence in parameters
 $keyVault.ResourceID
@@ -38,13 +38,13 @@ export token=$(curl -s "http://169.254.169.254/metadata/identity/oauth2/token?ap
     | jq -r .access_token)
 
 # Use this token to retrieve password from Key Vault
-curl -s https://my-keyvault-123.vault.azure.net/secrets/moje-heslo?api-version=2016-10-01 -H "Authorization: Bearer $token"
+curl -s https://dini-keyvault.vault.azure.net/secrets/secret-dini?api-version=2016-10-01 -H "Authorization: Bearer $token"
 
 sudo apt install mysql-client -y
 
-mysql -hmoje-mysql-db.mysql.database.azure.com \
-    -udbadmin@moje-mysql-db \
-    -p$(curl -s https://my-keyvault-123.vault.azure.net/secrets/moje-heslo?api-version=2016-10-01 -H "Authorization: Bearer $token" | jq -r .value) \
+mysql -h dini-mysql-db.mysql.database.azure.com \
+    -u dbadmin@dini-mysql-db \
+    -p$(curl -s https://dini-keyvault.vault.azure.net/secrets/secret-dini?api-version=2016-10-01 -H "Authorization: Bearer $token" | jq -r .value) \
     -e "SHOW DATABASES;"
 
 # Remove resource group
