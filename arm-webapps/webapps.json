@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "servicePlanName": {
-            "type": "String"
+            "type": "string"
         },
         "dbServer": {
             "type": "string"
@@ -207,7 +207,7 @@
             },
             "resources": [
                 {
-                    "type": "firewallrules",
+                    "type": "firewallRules",
                     "apiVersion": "2014-04-01",
                     "dependsOn": [
                       "[parameters('dbServer')]"

@@ -10,3 +10,8 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName `
 
 # Remove all resources
 Remove-AzureRmResourceGroup -Name $resourceGroupName -Force -AsJob
+
+#debug - default
+$DebugPreference="SilentlyContinue"
+#debug - verbose
+$DebugPreference="Continue"
